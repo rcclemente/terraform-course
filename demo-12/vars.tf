@@ -1,4 +1,5 @@
 variable "AWS_REGION" {
+<<<<<<< HEAD
   default = "eu-west-1"
 <<<<<<< HEAD
 }
@@ -11,14 +12,17 @@ variable "PATH_TO_PUBLIC_KEY" {
   default = "mykey.pub"
 }
 =======
+=======
+  default = "us-east-1"
+>>>>>>> 59ddf6f... demo12
 ***REMOVED***
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
+  default = "../mykey"
 ***REMOVED***
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  default = "../mykey.pub"
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
 

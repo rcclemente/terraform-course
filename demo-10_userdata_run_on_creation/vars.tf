@@ -18,11 +18,11 @@ variable "PATH_TO_PUBLIC_KEY" {
 ***REMOVED***
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
+  default = "../mykey"
 ***REMOVED***
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  default = "../mykey.pub"
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
 
