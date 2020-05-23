@@ -1,5 +1,7 @@
-*/mykey*
-mykey*
+aws-cred.txt
+**mykey*
 */.terraform/*
+*/.terraform*
 */terraform.tfstate*
 */terraform.tfvars
+
