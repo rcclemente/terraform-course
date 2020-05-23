@@ -9,6 +9,7 @@ module "consul" {
     "1" = aws_default_subnet.default_az2.id
     "2" = aws_default_subnet.default_az3.id
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 
@@ -23,4 +24,12 @@ output "consul-output" {
   value = module.consul.server_address
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+  }
+}
+
+output "consul-output" {
+  value = module.consul.server_address
+}
+>>>>>>> 78c7374... update_vars_image
 

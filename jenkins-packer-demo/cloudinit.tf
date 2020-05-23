@@ -5,12 +5,17 @@ data "template_file" "jenkins-init" {
     JENKINS_VERSION   = var.JENKINS_VERSION
     TERRAFORM_VERSION = var.TERRAFORM_VERSION
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 data "template_cloudinit_config" "cloudinit-jenkins" {
   gzip          = false
@@ -20,10 +25,15 @@ data "template_cloudinit_config" "cloudinit-jenkins" {
     content_type = "text/x-shellscript"
     content      = data.template_file.jenkins-init.rendered
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

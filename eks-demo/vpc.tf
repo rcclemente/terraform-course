@@ -15,6 +15,7 @@ module "vpc" {
   tags = {
     "Name"                                      = "terraform-eks-demo-node"
 <<<<<<< HEAD
+<<<<<<< HEAD
     "kubernetes.io/cluster/${var.cluster-name}" = "shared"
   }
 }
@@ -23,4 +24,9 @@ module "vpc" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+    "kubernetes.io/cluster/${var.cluster-name}" = "shared"
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

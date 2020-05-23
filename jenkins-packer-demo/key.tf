@@ -4,10 +4,15 @@ resource "aws_key_pair" "mykeypair" {
   lifecycle {
     ignore_changes = [public_key]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

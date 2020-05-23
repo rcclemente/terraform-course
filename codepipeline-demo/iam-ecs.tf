@@ -11,6 +11,7 @@ resource "aws_iam_role" "ecs-task-execution-role" {
       "Principal": {
         "Service": "ecs-tasks.amazonaws.com"
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
       "Action": "sts:AssumeRole"
     }
@@ -21,14 +22,21 @@ EOF
 }
 =======
       ***REMOVED***,
+=======
+      },
+>>>>>>> 78c7374... update_vars_image
       "Action": "sts:AssumeRole"
-    ***REMOVED***
+    }
   ]
-***REMOVED***
+}
 EOF
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy" "ecs-task-execution-role" {
   name = "ecs-task-execution-role"
@@ -52,6 +60,7 @@ resource "aws_iam_role_policy" "ecs-task-execution-role" {
       ],
       "Resource": "*"
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   ]
 }
@@ -60,12 +69,19 @@ EOF
 }
 =======
     ***REMOVED***
+=======
+    }
+>>>>>>> 78c7374... update_vars_image
   ]
-***REMOVED***
+}
 EOF
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role" "ecs-demo-task-role" {
   name = "ecs-demo-task-role"
@@ -80,6 +96,7 @@ resource "aws_iam_role" "ecs-demo-task-role" {
       "Principal": {
         "Service": "ecs-tasks.amazonaws.com"
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
       "Action": "sts:AssumeRole"
     }
@@ -91,12 +108,19 @@ EOF
 }
 =======
       ***REMOVED***,
+=======
+      },
+>>>>>>> 78c7374... update_vars_image
       "Action": "sts:AssumeRole"
-    ***REMOVED***
+    }
   ]
-***REMOVED***
+}
 EOF
 
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image

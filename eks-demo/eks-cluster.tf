@@ -14,18 +14,26 @@ resource "aws_eks_cluster" "demo" {
     # returns a single list item then leave it as-is and remove this TODO comment.
     subnet_ids = module.vpc.public_subnets
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   depends_on = [
     aws_iam_role_policy_attachment.demo-cluster-AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.demo-cluster-AmazonEKSServicePolicy,
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 

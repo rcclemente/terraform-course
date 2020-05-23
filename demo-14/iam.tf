@@ -9,6 +9,7 @@ resource "aws_iam_role" "s3-mybucket-role" {
       "Principal": {
         "Service": "ec2.amazonaws.com"
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
       "Effect": "Allow",
       "Sid": ""
@@ -20,24 +21,35 @@ EOF
 }
 =======
       ***REMOVED***,
+=======
+      },
+>>>>>>> 78c7374... update_vars_image
       "Effect": "Allow",
       "Sid": ""
-    ***REMOVED***
+    }
   ]
-***REMOVED***
+}
 EOF
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_instance_profile" "s3-mybucket-role-instanceprofile" {
   name = "s3-mybucket-role"
   role = aws_iam_role.s3-mybucket-role.name
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy" "s3-mybucket-role-policy" {
   name = "s3-mybucket-role-policy"
@@ -56,6 +68,7 @@ resource "aws_iam_role_policy" "s3-mybucket-role-policy" {
               "arn:aws:s3:::mybucket-c29df1/*"
             ]
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
     ]
 }
@@ -64,10 +77,17 @@ EOF
 }
 =======
         ***REMOVED***
+=======
+        }
+>>>>>>> 78c7374... update_vars_image
     ]
-***REMOVED***
+}
 EOF
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 

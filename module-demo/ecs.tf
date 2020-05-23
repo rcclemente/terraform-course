@@ -1,9 +1,13 @@
 data "aws_caller_identity" "current" {
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 module "my-ecs" {
   source         = "github.com/in4it/terraform-modules//modules/ecs-cluster?ref=terraform-0.12"
@@ -18,10 +22,14 @@ module "my-ecs" {
   AWS_ACCOUNT_ID = data.aws_caller_identity.current.account_id
   AWS_REGION     = var.AWS_REGION
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 module "my-service" {
   source              = "github.com/in4it/terraform-modules//modules/ecs-service?ref=terraform-0.12"
@@ -39,10 +47,14 @@ module "my-service" {
   DESIRED_COUNT       = 2
   ALB_ARN             = module.my-alb.alb_arn
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 module "my-alb" {
   source             = "github.com/in4it/terraform-modules//modules/alb?ref=terraform-0.12"
@@ -54,10 +66,14 @@ module "my-alb" {
   INTERNAL           = false
   ECS_SG             = module.my-ecs.cluster_sg
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 module "my-alb-rule" {
   source           = "github.com/in4it/terraform-modules//modules/alb-rule?ref=terraform-0.12"
@@ -67,8 +83,12 @@ module "my-alb-rule" {
   CONDITION_FIELD  = "host-header"
   CONDITION_VALUES = ["subdomain.ecs.newtech.academy"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 

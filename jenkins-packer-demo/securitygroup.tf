@@ -8,10 +8,14 @@ resource "aws_security_group" "jenkins-securitygroup" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   ingress {
     from_port   = 22
@@ -19,15 +23,20 @@ resource "aws_security_group" "jenkins-securitygroup" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   ingress {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   tags = {
@@ -41,6 +50,13 @@ resource "aws_security_group" "jenkins-securitygroup" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+  tags = {
+    Name = "jenkins-securitygroup"
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_security_group" "app-securitygroup" {
   vpc_id      = aws_vpc.main.id
@@ -52,10 +68,14 @@ resource "aws_security_group" "app-securitygroup" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   ingress {
     from_port   = 22
@@ -63,15 +83,20 @@ resource "aws_security_group" "app-securitygroup" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   tags = {
@@ -85,4 +110,11 @@ resource "aws_security_group" "app-securitygroup" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+  tags = {
+    Name = "app-securitygroup"
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

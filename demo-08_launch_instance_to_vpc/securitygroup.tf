@@ -8,16 +8,21 @@ resource "aws_security_group" "allow-ssh" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> ccf2496... demo 01 and 08
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   tags = {
@@ -31,4 +36,11 @@ resource "aws_security_group" "allow-ssh" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> ccf2496... demo 01 and 08
+=======
+  }
+  tags = {
+    Name = "allow-ssh"
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

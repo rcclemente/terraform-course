@@ -14,15 +14,20 @@ resource "aws_ecs_task_definition" "demo" {
   {
     "essential": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "image": "${aws_ecr_repository.demo.repository_url}",
 =======
     "image": "${aws_ecr_repository.demo.repository_url***REMOVED***",
 >>>>>>> 191d763... adding_other_demos
+=======
+    "image": "${aws_ecr_repository.demo.repository_url}",
+>>>>>>> 78c7374... update_vars_image
     "name": "demo",
     "logConfiguration": {
             "logDriver": "awslogs",
             "options": {
                "awslogs-group" : "demo",
+<<<<<<< HEAD
 <<<<<<< HEAD
                "awslogs-region": "${var.AWS_REGION}",
                "awslogs-stream-prefix": "ecs"
@@ -34,6 +39,12 @@ resource "aws_ecs_task_definition" "demo" {
             ***REMOVED***
      ***REMOVED***,
 >>>>>>> 191d763... adding_other_demos
+=======
+               "awslogs-region": "${var.AWS_REGION}",
+               "awslogs-stream-prefix": "ecs"
+            }
+     },
+>>>>>>> 78c7374... update_vars_image
      "secrets": [],
      "environment": [],
      "healthCheck": {
@@ -42,15 +53,20 @@ resource "aws_ecs_task_definition" "demo" {
        "retries": 3,
        "timeout": 5
 <<<<<<< HEAD
+<<<<<<< HEAD
      }, 
 =======
      ***REMOVED***, 
 >>>>>>> 191d763... adding_other_demos
+=======
+     }, 
+>>>>>>> 78c7374... update_vars_image
      "portMappings": [
         {
            "containerPort": 3000,
            "hostPort": 3000,
            "protocol": "tcp"
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
      ]
@@ -61,13 +77,20 @@ DEFINITION
 }
 =======
         ***REMOVED***
+=======
+        }
+>>>>>>> 78c7374... update_vars_image
      ]
-  ***REMOVED***
+  }
 ]
 DEFINITION
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_ecs_service" "demo" {
   name            = "demo"
@@ -80,35 +103,48 @@ resource "aws_ecs_service" "demo" {
   deployment_controller {
     type = "CODE_DEPLOY"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   network_configuration {
     subnets          = slice(module.vpc.public_subnets, 1, 2)
     security_groups  = [aws_security_group.ecs-demo.id]
     assign_public_ip = true
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   load_balancer {
     target_group_arn = aws_lb_target_group.demo-blue.id
     container_name   = "demo"
     container_port   = "3000"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   lifecycle {
     ignore_changes = [
       task_definition,
       load_balancer
     ]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -116,6 +152,10 @@ resource "aws_ecs_service" "demo" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 # security group
 resource "aws_security_group" "ecs-demo" {
@@ -129,10 +169,14 @@ resource "aws_security_group" "ecs-demo" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   egress {
     from_port = 0
@@ -142,18 +186,27 @@ resource "aws_security_group" "ecs-demo" {
       "0.0.0.0/0"
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 # logs
 resource "aws_cloudwatch_log_group" "demo" {
   name = "demo"
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image

@@ -2,6 +2,7 @@ data "aws_ami" "eks-worker" {
   filter {
     name   = "name"
 <<<<<<< HEAD
+<<<<<<< HEAD
     values = ["amazon-eks-node-${aws_eks_cluster.demo.version}-v*"]
   }
 
@@ -16,6 +17,14 @@ data "aws_ami" "eks-worker" {
   owners      = ["602401143452"] # Amazon
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+    values = ["amazon-eks-node-${aws_eks_cluster.demo.version}-v*"]
+  }
+
+  most_recent = true
+  owners      = ["602401143452"] # Amazon
+}
+>>>>>>> 78c7374... update_vars_image
 
 # EKS currently documents this required userdata for EKS worker nodes to
 # properly configure Kubernetes applications on the EC2 instance.
@@ -27,6 +36,7 @@ locals {
 #!/bin/bash
 set -o xtrace
 <<<<<<< HEAD
+<<<<<<< HEAD
 /etc/eks/bootstrap.sh --apiserver-endpoint '${aws_eks_cluster.demo.endpoint}' --b64-cluster-ca '${aws_eks_cluster.demo.certificate_authority[0].data}' '${var.cluster-name}'
 USERDATA
 
@@ -37,6 +47,12 @@ USERDATA
 
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+/etc/eks/bootstrap.sh --apiserver-endpoint '${aws_eks_cluster.demo.endpoint}' --b64-cluster-ca '${aws_eks_cluster.demo.certificate_authority[0].data}' '${var.cluster-name}'
+USERDATA
+
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_launch_configuration" "demo" {
   associate_public_ip_address = true
@@ -50,12 +66,17 @@ resource "aws_launch_configuration" "demo" {
   lifecycle {
     create_before_destroy = true
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_autoscaling_group" "demo" {
   desired_capacity = 2
@@ -78,6 +99,7 @@ resource "aws_autoscaling_group" "demo" {
     value = "terraform-eks-demo"
     propagate_at_launch = true
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
   tag {
@@ -88,12 +110,20 @@ resource "aws_autoscaling_group" "demo" {
 }
 =======
   ***REMOVED***
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   tag {
-    key = "kubernetes.io/cluster/${var.cluster-name***REMOVED***"
+    key = "kubernetes.io/cluster/${var.cluster-name}"
     value = "owned"
     propagate_at_launch = true
+<<<<<<< HEAD
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

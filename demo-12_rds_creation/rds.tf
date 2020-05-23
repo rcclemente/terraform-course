@@ -3,10 +3,14 @@ resource "aws_db_subnet_group" "mariadb-subnet" {
   description = "RDS subnet group"
   subnet_ids  = [aws_subnet.main-private-1.id, aws_subnet.main-private-2.id]
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_db_parameter_group" "mariadb-parameters" {
   name        = "mariadb-parameters"
@@ -17,12 +21,17 @@ resource "aws_db_parameter_group" "mariadb-parameters" {
     name  = "max_allowed_packet"
     value = "16777216"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_db_instance" "mariadb" {
   allocated_storage       = 100 # 100 GB of storage, gives us more IOPS than a lower number
@@ -44,10 +53,15 @@ resource "aws_db_instance" "mariadb" {
   tags = {
     Name = "mariadb-instance"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

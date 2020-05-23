@@ -12,12 +12,17 @@ resource "aws_codepipeline" "demo" {
       id   = aws_kms_alias.demo-artifacts.arn
       type = "KMS"
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
 =======
     ***REMOVED***
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+    }
+  }
+>>>>>>> 78c7374... update_vars_image
 
   stage {
     name = "Source"
@@ -34,6 +39,7 @@ resource "aws_codepipeline" "demo" {
         RepositoryName = aws_codecommit_repository.demo.repository_name
         BranchName     = "master"
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     }
   }
@@ -42,6 +48,11 @@ resource "aws_codepipeline" "demo" {
     ***REMOVED***
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+      }
+    }
+  }
+>>>>>>> 78c7374... update_vars_image
 
   stage {
     name = "Build"
@@ -58,6 +69,7 @@ resource "aws_codepipeline" "demo" {
       configuration = {
         ProjectName = aws_codebuild_project.demo.name
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     }
   }
@@ -66,6 +78,11 @@ resource "aws_codepipeline" "demo" {
     ***REMOVED***
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+      }
+    }
+  }
+>>>>>>> 78c7374... update_vars_image
 
   stage {
     name = "Deploy"
@@ -84,15 +101,21 @@ resource "aws_codepipeline" "demo" {
         TaskDefinitionTemplateArtifact = "demo-docker-build"
         AppSpecTemplateArtifact        = "demo-docker-build"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 78c7374... update_vars_image
       }
     }
   }
 }
+<<<<<<< HEAD
 =======
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+>>>>>>> 78c7374... update_vars_image
 
 

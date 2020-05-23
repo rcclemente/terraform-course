@@ -8,10 +8,14 @@ resource "aws_security_group" "ecs-securitygroup" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   ingress {
     from_port       = 3000
@@ -19,15 +23,20 @@ resource "aws_security_group" "ecs-securitygroup" {
     protocol        = "tcp"
     security_groups = [aws_security_group.myapp-elb-securitygroup.id]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   tags = {
@@ -41,6 +50,13 @@ resource "aws_security_group" "ecs-securitygroup" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+  tags = {
+    Name = "ecs"
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_security_group" "myapp-elb-securitygroup" {
   vpc_id      = aws_vpc.main.id
@@ -52,16 +68,21 @@ resource "aws_security_group" "myapp-elb-securitygroup" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   tags = {
@@ -75,6 +96,13 @@ resource "aws_security_group" "myapp-elb-securitygroup" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+  tags = {
+    Name = "myapp-elb"
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 # jenkins
 resource "aws_security_group" "jenkins-securitygroup" {
@@ -87,10 +115,14 @@ resource "aws_security_group" "jenkins-securitygroup" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   ingress {
     from_port   = 22
@@ -98,15 +130,20 @@ resource "aws_security_group" "jenkins-securitygroup" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   ingress {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   tags = {
@@ -120,4 +157,11 @@ resource "aws_security_group" "jenkins-securitygroup" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+  tags = {
+    Name = "jenkins-securitygroup"
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

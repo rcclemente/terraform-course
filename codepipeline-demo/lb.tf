@@ -4,10 +4,14 @@ resource "aws_lb" "demo" {
   load_balancer_type               = "network"
   enable_cross_zone_load_balancing = true
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_lb_listener" "demo" {
   load_balancer_arn = aws_lb.demo.arn
@@ -18,14 +22,19 @@ resource "aws_lb_listener" "demo" {
     target_group_arn = aws_lb_target_group.demo-blue.id
     type             = "forward"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   lifecycle {
     ignore_changes = [
       default_action,
     ]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -33,6 +42,10 @@ resource "aws_lb_listener" "demo" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_lb_target_group" "demo-blue" {
   name                 = "demo-http-blue"
@@ -48,12 +61,17 @@ resource "aws_lb_target_group" "demo-blue" {
     protocol            = "TCP"
     interval            = 30
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 resource "aws_lb_target_group" "demo-green" {
   name                 = "demo-http-green"
   port                 = "3000"
@@ -68,9 +86,14 @@ resource "aws_lb_target_group" "demo-green" {
     protocol            = "TCP"
     interval            = 30
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image

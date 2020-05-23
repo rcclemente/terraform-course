@@ -10,6 +10,7 @@ resource "aws_iam_role" "demo-cluster" {
       "Principal": {
         "Service": "eks.amazonaws.com"
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
       "Action": "sts:AssumeRole"
     }
@@ -20,32 +21,47 @@ POLICY
 }
 =======
       ***REMOVED***,
+=======
+      },
+>>>>>>> 78c7374... update_vars_image
       "Action": "sts:AssumeRole"
-    ***REMOVED***
+    }
   ]
-***REMOVED***
+}
 POLICY
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy_attachment" "demo-cluster-AmazonEKSClusterPolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
   role = aws_iam_role.demo-cluster.name
 <<<<<<< HEAD
-}
-=======
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-
-resource "aws_iam_role_policy_attachment" "demo-cluster-AmazonEKSServicePolicy" {
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
-  role = aws_iam_role.demo-cluster.name
 <<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
+
+resource "aws_iam_role_policy_attachment" "demo-cluster-AmazonEKSServicePolicy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+  role = aws_iam_role.demo-cluster.name
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 # If no loadbalancer was ever created in this region, then this following role is necessary
 resource "aws_iam_role_policy" "demo-cluster-service-linked-role" {
@@ -61,16 +77,21 @@ resource "aws_iam_role_policy" "demo-cluster-service-linked-role" {
             "Action": "iam:CreateServiceLinkedRole",
             "Resource": "arn:aws:iam::*:role/aws-service-role/*"
 <<<<<<< HEAD
+<<<<<<< HEAD
         },
 =======
         ***REMOVED***,
 >>>>>>> 191d763... adding_other_demos
+=======
+        },
+>>>>>>> 78c7374... update_vars_image
         {
             "Effect": "Allow",
             "Action": [
                 "ec2:DescribeAccountAttributes"
             ],
             "Resource": "*"
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
     ]
@@ -80,10 +101,17 @@ EOF
 }
 =======
         ***REMOVED***
+=======
+        }
+>>>>>>> 78c7374... update_vars_image
     ]
-***REMOVED***
+}
 EOF
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 

@@ -5,14 +5,19 @@ data "aws_ami" "ubuntu" {
     name   = "name"
     values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
 
   filter {
     name   = "virtualization-type"
     values = ["hvm"]
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -24,6 +29,12 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+
+  owners = ["099720109477"] # Canonical
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_instance" "jenkins-instance" {
   ami           = data.aws_ami.ubuntu.id
@@ -44,10 +55,14 @@ resource "aws_instance" "jenkins-instance" {
   # iam instance profile
   iam_instance_profile = aws_iam_instance_profile.jenkins-role.name
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_ebs_volume" "jenkins-data" {
   availability_zone = "eu-west-1a"
@@ -56,12 +71,17 @@ resource "aws_ebs_volume" "jenkins-data" {
   tags = {
     Name = "jenkins-data"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_volume_attachment" "jenkins-data-attachment" {
   device_name  = var.INSTANCE_DEVICE_NAME
@@ -69,19 +89,27 @@ resource "aws_volume_attachment" "jenkins-data-attachment" {
   instance_id  = aws_instance.jenkins-instance.id
   skip_destroy = true
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_instance" "app-instance" {
   count         = var.APP_INSTANCE_COUNT
   ami           = var.APP_INSTANCE_AMI
 <<<<<<< HEAD
+<<<<<<< HEAD
   instance_type = "t2.micro"
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  instance_type = "t2.micro"
+>>>>>>> 78c7374... update_vars_image
 
   # the VPC subnet
   subnet_id = aws_subnet.main-public-1.id
@@ -92,8 +120,12 @@ resource "aws_instance" "app-instance" {
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 

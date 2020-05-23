@@ -2,10 +2,14 @@
 resource "aws_ecs_cluster" "example-cluster" {
   name = "example-cluster"
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_launch_configuration" "ecs-example-launchconfig" {
   name_prefix          = "ecs-launchconfig"
@@ -18,12 +22,17 @@ resource "aws_launch_configuration" "ecs-example-launchconfig" {
   lifecycle {
     create_before_destroy = true
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_autoscaling_group" "ecs-example-autoscaling" {
   name                 = "ecs-example-autoscaling"
@@ -36,10 +45,15 @@ resource "aws_autoscaling_group" "ecs-example-autoscaling" {
     value               = "ecs-ec2-container"
     propagate_at_launch = true
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 

@@ -8,10 +8,14 @@ resource "aws_autoscaling_policy" "example-cpu-policy" {
   cooldown               = "300"
   policy_type            = "SimpleScaling"
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm" {
   alarm_name          = "example-cpu-alarm"
@@ -27,6 +31,7 @@ resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm" {
   dimensions = {
     "AutoScalingGroupName" = aws_autoscaling_group.example-autoscaling.name
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
   actions_enabled = true
@@ -39,6 +44,13 @@ resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm" {
   alarm_actions   = [aws_autoscaling_policy.example-cpu-policy.arn]
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+  }
+
+  actions_enabled = true
+  alarm_actions   = [aws_autoscaling_policy.example-cpu-policy.arn]
+}
+>>>>>>> 78c7374... update_vars_image
 
 # scale down alarm
 resource "aws_autoscaling_policy" "example-cpu-policy-scaledown" {
@@ -49,10 +61,14 @@ resource "aws_autoscaling_policy" "example-cpu-policy-scaledown" {
   cooldown               = "300"
   policy_type            = "SimpleScaling"
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm-scaledown" {
   alarm_name          = "example-cpu-alarm-scaledown"
@@ -68,6 +84,7 @@ resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm-scaledown" {
   dimensions = {
     "AutoScalingGroupName" = aws_autoscaling_group.example-autoscaling.name
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
   actions_enabled = true
@@ -80,4 +97,11 @@ resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm-scaledown" {
   alarm_actions   = [aws_autoscaling_policy.example-cpu-policy-scaledown.arn]
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
+=======
+  }
+
+  actions_enabled = true
+  alarm_actions   = [aws_autoscaling_policy.example-cpu-policy-scaledown.arn]
+}
+>>>>>>> 78c7374... update_vars_image
 

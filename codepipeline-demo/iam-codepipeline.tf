@@ -10,6 +10,7 @@ resource "aws_iam_role" "demo-codepipeline" {
       "Principal": {
         "Service": "codepipeline.amazonaws.com"
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
       "Action": "sts:AssumeRole"
     }
@@ -20,14 +21,21 @@ EOF
 }
 =======
       ***REMOVED***,
+=======
+      },
+>>>>>>> 78c7374... update_vars_image
       "Action": "sts:AssumeRole"
-    ***REMOVED***
+    }
   ]
-***REMOVED***
+}
 EOF
 
+<<<<<<< HEAD
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
   statement {
@@ -38,6 +46,7 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
     resources = [
       aws_s3_bucket.demo-artifacts.arn,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "${aws_s3_bucket.demo-artifacts.arn}/*",
     ]
   }
@@ -46,6 +55,11 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
     ]
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+      "${aws_s3_bucket.demo-artifacts.arn}/*",
+    ]
+  }
+>>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
@@ -56,16 +70,21 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
       "*",
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
       "sts:AssumeRole",
     ]
     resources = [
+<<<<<<< HEAD
 <<<<<<< HEAD
       "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/demo-codepipeline",
     ]
@@ -75,6 +94,11 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
     ]
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+      "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/demo-codepipeline",
+    ]
+  }
+>>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
@@ -88,10 +112,14 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
       aws_kms_key.demo-artifacts.arn,
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
@@ -106,10 +134,14 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
       aws_codecommit_repository.demo.arn,
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
@@ -120,10 +152,14 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
       "*",
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }
+>>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
@@ -138,6 +174,7 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
       variable = "iam:PassedToService"
       values   = ["ecs-tasks.amazonaws.com"]
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
 }
@@ -146,15 +183,24 @@ data "aws_iam_policy_document" "demo-codepipeline-role-policy" {
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+    }
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy" "demo-codepipeline" {
   name   = "codepipeline-policy"
   role   = aws_iam_role.demo-codepipeline.id
   policy = data.aws_iam_policy_document.demo-codepipeline-role-policy.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+}
+>>>>>>> 78c7374... update_vars_image
 
 

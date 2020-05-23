@@ -3,6 +3,7 @@
     "aws_access_key": "",
     "aws_secret_key": ""
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   "builders": [{
     "type": "amazon-ebs",
@@ -15,10 +16,18 @@
     "access_key": "{{user `aws_access_key`***REMOVED******REMOVED***",
     "secret_key": "{{user `aws_secret_key`***REMOVED******REMOVED***",
 >>>>>>> 191d763... adding_other_demos
+=======
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+>>>>>>> 78c7374... update_vars_image
     "region": "eu-west-1",
     "source_ami": "ami-844e0bf7",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "ami_name": "packer-example {{timestamp}}"
   }],
@@ -32,11 +41,20 @@
 =======
     "ami_name": "packer-example {{timestamp***REMOVED******REMOVED***"
   ***REMOVED***],
+=======
+    "ami_name": "packer-example {{timestamp}}"
+  }],
+>>>>>>> 78c7374... update_vars_image
   "provisioners": [{
     "type": "shell",
     "scripts": [  "scripts/install_software.sh"   ],
-    "execute_command": "{{ .Vars ***REMOVED******REMOVED*** sudo -E sh '{{ .Path ***REMOVED******REMOVED***'",
+    "execute_command": "{{ .Vars }} sudo -E sh '{{ .Path }}'",
     "pause_before": "10s"
+<<<<<<< HEAD
   ***REMOVED***]
 ***REMOVED***
 >>>>>>> 191d763... adding_other_demos
+=======
+  }]
+}
+>>>>>>> 78c7374... update_vars_image

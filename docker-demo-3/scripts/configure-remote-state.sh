@@ -10,10 +10,15 @@ terraform {
     key    = "terraform.tfstate"
     region = "eu-west-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
   ***REMOVED***
 ***REMOVED***
 >>>>>>> 32a340e... add_docker
+=======
+  }
+}
+>>>>>>> 78c7374... update_vars_image
 '
