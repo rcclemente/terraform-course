@@ -2,7 +2,11 @@ resource "aws_db_subnet_group" "mariadb-subnet" {
   name        = "mariadb-subnet"
   description = "RDS subnet group"
   subnet_ids  = [aws_subnet.main-private-1.id, aws_subnet.main-private-2.id]
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_db_parameter_group" "mariadb-parameters" {
   name        = "mariadb-params"
@@ -12,8 +16,13 @@ resource "aws_db_parameter_group" "mariadb-parameters" {
   parameter {
     name  = "max_allowed_packet"
     value = "16777216"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_db_instance" "mariadb" {
   allocated_storage         = 100 # 100 GB of storage, gives us more IOPS than a lower number
@@ -34,6 +43,11 @@ resource "aws_db_instance" "mariadb" {
   final_snapshot_identifier = "mariadb-final-snapshot"                    # final snapshot when executing terraform destroy
   tags = {
     Name = "mariadb-instance"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

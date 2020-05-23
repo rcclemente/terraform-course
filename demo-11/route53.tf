@@ -1,6 +1,10 @@
 resource "aws_route53_zone" "newtech-academy" {
   name = "newtech.academy"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_route53_record" "server1-record" {
   zone_id = aws_route53_zone.newtech-academy.zone_id
@@ -8,7 +12,11 @@ resource "aws_route53_record" "server1-record" {
   type    = "A"
   ttl     = "300"
   records = ["104.236.247.8"]
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_route53_record" "www-record" {
   zone_id = aws_route53_zone.newtech-academy.zone_id
@@ -16,7 +24,11 @@ resource "aws_route53_record" "www-record" {
   type    = "A"
   ttl     = "300"
   records = ["104.236.247.8"]
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_route53_record" "mail1-record" {
   zone_id = aws_route53_zone.newtech-academy.zone_id
@@ -30,9 +42,17 @@ resource "aws_route53_record" "mail1-record" {
     "10 aspmx2.googlemail.com.",
     "10 aspmx3.googlemail.com.",
   ]
+<<<<<<< HEAD
 }
 
 output "ns-servers" {
   value = aws_route53_zone.newtech-academy.name_servers
 }
+=======
+***REMOVED***
+
+output "ns-servers" {
+  value = aws_route53_zone.newtech-academy.name_servers
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

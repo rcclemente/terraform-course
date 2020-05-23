@@ -4,6 +4,11 @@ resource "aws_s3_bucket" "b" {
 
   tags = {
     Name = "mybucket-c29df1"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

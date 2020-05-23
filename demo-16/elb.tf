@@ -7,20 +7,33 @@ resource "aws_elb" "my-elb" {
     instance_protocol = "http"
     lb_port           = 80
     lb_protocol       = "http"
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 986ba1c... add_demos
   health_check {
     healthy_threshold   = 2
     unhealthy_threshold = 2
     timeout             = 3
     target              = "HTTP:80/"
     interval            = 30
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
   cross_zone_load_balancing   = true
   connection_draining         = true
   connection_draining_timeout = 400
   tags = {
     Name = "my-elb"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

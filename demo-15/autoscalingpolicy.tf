@@ -7,7 +7,11 @@ resource "aws_autoscaling_policy" "example-cpu-policy" {
   scaling_adjustment     = "1"
   cooldown               = "300"
   policy_type            = "SimpleScaling"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm" {
   alarm_name          = "example-cpu-alarm"
@@ -22,11 +26,19 @@ resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm" {
 
   dimensions = {
     "AutoScalingGroupName" = aws_autoscaling_group.example-autoscaling.name
+<<<<<<< HEAD
   }
 
   actions_enabled = true
   alarm_actions   = [aws_autoscaling_policy.example-cpu-policy.arn]
 }
+=======
+  ***REMOVED***
+
+  actions_enabled = true
+  alarm_actions   = [aws_autoscaling_policy.example-cpu-policy.arn]
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 # scale down alarm
 resource "aws_autoscaling_policy" "example-cpu-policy-scaledown" {
@@ -36,7 +48,11 @@ resource "aws_autoscaling_policy" "example-cpu-policy-scaledown" {
   scaling_adjustment     = "-1"
   cooldown               = "300"
   policy_type            = "SimpleScaling"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm-scaledown" {
   alarm_name          = "example-cpu-alarm-scaledown"
@@ -51,9 +67,17 @@ resource "aws_cloudwatch_metric_alarm" "example-cpu-alarm-scaledown" {
 
   dimensions = {
     "AutoScalingGroupName" = aws_autoscaling_group.example-autoscaling.name
+<<<<<<< HEAD
   }
 
   actions_enabled = true
   alarm_actions   = [aws_autoscaling_policy.example-cpu-policy-scaledown.arn]
 }
+=======
+  ***REMOVED***
+
+  actions_enabled = true
+  alarm_actions   = [aws_autoscaling_policy.example-cpu-policy-scaledown.arn]
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

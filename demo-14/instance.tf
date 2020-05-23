@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 resource "aws_instance" "example" {
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
+=======
+***REMOVED***
+  ami           = var.AMIS[var.AWS_REGION]
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
   # the VPC subnet
   subnet_id = aws_subnet.main-public-1.id
@@ -13,5 +19,9 @@ resource "aws_instance" "example" {
 
   # role:
   iam_instance_profile = aws_iam_instance_profile.s3-mybucket-role-instanceprofile.name
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

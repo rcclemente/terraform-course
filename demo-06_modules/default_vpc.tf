@@ -6,6 +6,7 @@
 resource "aws_default_vpc" "default" {
   tags = {
     Name = "Default VPC"
+<<<<<<< HEAD
   }
 }
 
@@ -33,4 +34,33 @@ resource "aws_default_subnet" "default_az3" {
     Name = "Default subnet for ${var.AWS_REGION}c"
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+
+# default subnets
+resource "aws_default_subnet" "default_az1" {
+  availability_zone = "${var.AWS_REGION***REMOVED***a"
+
+  tags = {
+    Name = "Default subnet for ${var.AWS_REGION***REMOVED***a"
+  ***REMOVED***
+***REMOVED***
+
+resource "aws_default_subnet" "default_az2" {
+  availability_zone = "${var.AWS_REGION***REMOVED***b"
+
+  tags = {
+    Name = "Default subnet for ${var.AWS_REGION***REMOVED***b"
+  ***REMOVED***
+***REMOVED***
+
+resource "aws_default_subnet" "default_az3" {
+  availability_zone = "${var.AWS_REGION***REMOVED***c"
+
+  tags = {
+    Name = "Default subnet for ${var.AWS_REGION***REMOVED***c"
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

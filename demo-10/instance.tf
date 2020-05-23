@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 resource "aws_instance" "example" {
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
+=======
+***REMOVED***
+  ami           = var.AMIS[var.AWS_REGION]
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
   # the VPC subnet
   subnet_id = aws_subnet.main-public-1.id
@@ -13,7 +19,11 @@ resource "aws_instance" "example" {
 
   # user data
   user_data = data.template_cloudinit_config.cloudinit-example.rendered
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_ebs_volume" "ebs-volume-1" {
   availability_zone = "eu-west-1a"
@@ -21,13 +31,22 @@ resource "aws_ebs_volume" "ebs-volume-1" {
   type              = "gp2"
   tags = {
     Name = "extra volume data"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_volume_attachment" "ebs-volume-1-attachment" {
   device_name  = var.INSTANCE_DEVICE_NAME
   volume_id    = aws_ebs_volume.ebs-volume-1.id
   instance_id  = aws_instance.example.id
   skip_destroy = true                            # skip destroy to avoid issues with terraform destroy
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

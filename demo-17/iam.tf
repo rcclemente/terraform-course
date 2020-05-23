@@ -9,6 +9,7 @@ resource "aws_iam_role" "app-ec2-role" {
       "Action": "sts:AssumeRole",
       "Principal": {
         "Service": "ec2.amazonaws.com"
+<<<<<<< HEAD
       },
       "Effect": "Allow",
       "Sid": ""
@@ -18,11 +19,26 @@ resource "aws_iam_role" "app-ec2-role" {
 EOF
 
 }
+=======
+      ***REMOVED***,
+      "Effect": "Allow",
+      "Sid": ""
+    ***REMOVED***
+  ]
+***REMOVED***
+EOF
+
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_iam_instance_profile" "app-ec2-role" {
   name = "app-ec2-role"
   role = aws_iam_role.app-ec2-role.name
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 # service
 resource "aws_iam_role" "elasticbeanstalk-service-role" {
@@ -35,6 +51,7 @@ resource "aws_iam_role" "elasticbeanstalk-service-role" {
       "Action": "sts:AssumeRole",
       "Principal": {
         "Service": "elasticbeanstalk.amazonaws.com"
+<<<<<<< HEAD
       },
       "Effect": "Allow",
       "Sid": ""
@@ -44,29 +61,56 @@ resource "aws_iam_role" "elasticbeanstalk-service-role" {
 EOF
 
 }
+=======
+      ***REMOVED***,
+      "Effect": "Allow",
+      "Sid": ""
+    ***REMOVED***
+  ]
+***REMOVED***
+EOF
+
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 # policies
 resource "aws_iam_policy_attachment" "app-attach1" {
 name       = "app-attach1"
 roles      = [aws_iam_role.app-ec2-role.name]
 policy_arn = "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_iam_policy_attachment" "app-attach2" {
 name       = "app-attach2"
 roles      = [aws_iam_role.app-ec2-role.name]
 policy_arn = "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_iam_policy_attachment" "app-attach3" {
 name       = "app-attach3"
 roles      = [aws_iam_role.app-ec2-role.name]
 policy_arn = "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_iam_policy_attachment" "app-attach4" {
 name       = "app-attach4"
 roles      = [aws_iam_role.elasticbeanstalk-service-role.name]
 policy_arn = "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 

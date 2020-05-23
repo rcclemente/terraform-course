@@ -4,11 +4,19 @@ resource "aws_launch_configuration" "example-launchconfig" {
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.mykeypair.key_name
   security_groups = [aws_security_group.myinstance.id]
+<<<<<<< HEAD
   user_data       = "#!/bin/bash\napt-get update\napt-get -y install nginx\nMYIP=`ifconfig | grep 'addr:10' | awk '{ print $2 }' | cut -d ':' -f2`\necho 'this is: '$MYIP > /var/www/html/index.html"
   lifecycle {
     create_before_destroy = true
   }
 }
+=======
+  user_data       = "#!/bin/bash\napt-get update\napt-get -y install nginx\nMYIP=`ifconfig | grep 'addr:10' | awk '{ print $2 ***REMOVED***' | cut -d ':' -f2`\necho 'this is: '$MYIP > /var/www/html/index.html"
+  lifecycle {
+    create_before_destroy = true
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
 resource "aws_autoscaling_group" "example-autoscaling" {
   name                      = "example-autoscaling"
@@ -25,6 +33,11 @@ resource "aws_autoscaling_group" "example-autoscaling" {
     key                 = "Name"
     value               = "ec2 instance"
     propagate_at_launch = true
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 986ba1c... add_demos
 
