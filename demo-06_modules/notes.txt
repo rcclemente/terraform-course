@@ -1,0 +1,5 @@
+# download first the module
+terraform get
+
+# start it up
+terraform apply
