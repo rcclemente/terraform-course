@@ -1,4 +1,5 @@
 variable "AWS_REGION" {
+<<<<<<< HEAD:demo-10/vars.tf
   default = "eu-west-1"
 <<<<<<< HEAD
 }
@@ -11,6 +12,9 @@ variable "PATH_TO_PUBLIC_KEY" {
   default = "mykey.pub"
 }
 =======
+=======
+  default = "us-east-1"
+>>>>>>> d7b1608... mv_demo_10:demo-10_userdata_run_on_creation/vars.tf
 ***REMOVED***
 
 variable "PATH_TO_PRIVATE_KEY" {

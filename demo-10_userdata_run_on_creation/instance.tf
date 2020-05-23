@@ -26,7 +26,7 @@ resource "aws_instance" "example" {
 >>>>>>> 986ba1c... add_demos
 
 resource "aws_ebs_volume" "ebs-volume-1" {
-  availability_zone = "eu-west-1a"
+  availability_zone = "us-east-1a"
   size              = 20
   type              = "gp2"
   tags = {
@@ -50,3 +50,6 @@ resource "aws_volume_attachment" "ebs-volume-1-attachment" {
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
 
+output "ip" {
+  value = aws_instance.example.public_ip
+***REMOVED***
