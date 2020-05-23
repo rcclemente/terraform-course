@@ -42,6 +42,9 @@ variable "RDS_PASSWORD" {
   ***REMOVED***
 ***REMOVED***
 
+# add in terraform.tfvars
+# or via cli
+#   $> terraform apply -var RDS_PASSWORD=<password>
 variable "RDS_PASSWORD" {
 ***REMOVED***
 >>>>>>> 986ba1c... add_demos
