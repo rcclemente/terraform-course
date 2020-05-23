@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 aws-cred.txt
 **mykey*
 */.terraform/*
@@ -5,3 +6,10 @@ aws-cred.txt
 */terraform.tfstate*
 */terraform.tfvars
 
+=======
+*/mykey*
+mykey*
+*/.terraform/*
+*/terraform.tfstate*
+*/terraform.tfvars
+>>>>>>> ccf2496... demo 01 and 08

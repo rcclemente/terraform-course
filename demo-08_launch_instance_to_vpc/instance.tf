@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 resource "aws_instance" "example" {
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
+=======
+***REMOVED***
+  ami           = var.AMIS[var.AWS_REGION]
+***REMOVED***
+>>>>>>> ccf2496... demo 01 and 08
 
   # the VPC subnet
   subnet_id = aws_subnet.main-public-1.id
@@ -10,8 +16,16 @@ resource "aws_instance" "example" {
 
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
+<<<<<<< HEAD
 }
 
 output "ip" {
   value = aws_instance.example.public_ip
 }
+=======
+***REMOVED***
+
+output "ip" {
+  value = aws_instance.example.public_ip
+***REMOVED***
+>>>>>>> ccf2496... demo 01 and 08
