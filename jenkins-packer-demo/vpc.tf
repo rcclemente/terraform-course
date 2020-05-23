@@ -7,8 +7,13 @@ resource "aws_vpc" "main" {
   enable_classiclink   = "false"
   tags = {
     Name = "main"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 # Subnets
 resource "aws_subnet" "main-public-1" {
@@ -19,8 +24,13 @@ resource "aws_subnet" "main-public-1" {
 
   tags = {
     Name = "main-public-1"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_subnet" "main-public-2" {
   vpc_id                  = aws_vpc.main.id
@@ -30,8 +40,13 @@ resource "aws_subnet" "main-public-2" {
 
   tags = {
     Name = "main-public-2"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_subnet" "main-public-3" {
   vpc_id                  = aws_vpc.main.id
@@ -41,8 +56,13 @@ resource "aws_subnet" "main-public-3" {
 
   tags = {
     Name = "main-public-3"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_subnet" "main-private-1" {
   vpc_id                  = aws_vpc.main.id
@@ -52,8 +72,13 @@ resource "aws_subnet" "main-private-1" {
 
   tags = {
     Name = "main-private-1"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_subnet" "main-private-2" {
   vpc_id                  = aws_vpc.main.id
@@ -63,8 +88,13 @@ resource "aws_subnet" "main-private-2" {
 
   tags = {
     Name = "main-private-2"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_subnet" "main-private-3" {
   vpc_id                  = aws_vpc.main.id
@@ -74,8 +104,13 @@ resource "aws_subnet" "main-private-3" {
 
   tags = {
     Name = "main-private-3"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 # Internet GW
 resource "aws_internet_gateway" "main-gw" {
@@ -83,8 +118,13 @@ resource "aws_internet_gateway" "main-gw" {
 
   tags = {
     Name = "main"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 # route tables
 resource "aws_route_table" "main-public" {
@@ -92,26 +132,47 @@ resource "aws_route_table" "main-public" {
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.main-gw.id
+<<<<<<< HEAD
   }
 
   tags = {
     Name = "main-public-1"
   }
 }
+=======
+  ***REMOVED***
+
+  tags = {
+    Name = "main-public-1"
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 # route associations public
 resource "aws_route_table_association" "main-public-1-a" {
   subnet_id      = aws_subnet.main-public-1.id
   route_table_id = aws_route_table.main-public.id
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_route_table_association" "main-public-2-a" {
   subnet_id      = aws_subnet.main-public-2.id
   route_table_id = aws_route_table.main-public.id
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_route_table_association" "main-public-3-a" {
   subnet_id      = aws_subnet.main-public-3.id
   route_table_id = aws_route_table.main-public.id
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 

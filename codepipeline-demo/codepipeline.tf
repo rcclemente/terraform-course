@@ -11,8 +11,13 @@ resource "aws_codepipeline" "demo" {
     encryption_key {
       id   = aws_kms_alias.demo-artifacts.arn
       type = "KMS"
+<<<<<<< HEAD
     }
   }
+=======
+    ***REMOVED***
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   stage {
     name = "Source"
@@ -28,9 +33,15 @@ resource "aws_codepipeline" "demo" {
       configuration = {
         RepositoryName = aws_codecommit_repository.demo.repository_name
         BranchName     = "master"
+<<<<<<< HEAD
       }
     }
   }
+=======
+      ***REMOVED***
+    ***REMOVED***
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   stage {
     name = "Build"
@@ -46,9 +57,15 @@ resource "aws_codepipeline" "demo" {
 
       configuration = {
         ProjectName = aws_codebuild_project.demo.name
+<<<<<<< HEAD
       }
     }
   }
+=======
+      ***REMOVED***
+    ***REMOVED***
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   stage {
     name = "Deploy"
@@ -66,9 +83,16 @@ resource "aws_codepipeline" "demo" {
         DeploymentGroupName            = aws_codedeploy_deployment_group.demo.deployment_group_name
         TaskDefinitionTemplateArtifact = "demo-docker-build"
         AppSpecTemplateArtifact        = "demo-docker-build"
+<<<<<<< HEAD
       }
     }
   }
 }
+=======
+      ***REMOVED***
+    ***REMOVED***
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 

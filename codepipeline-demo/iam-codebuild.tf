@@ -12,6 +12,7 @@ resource "aws_iam_role" "demo-codebuild" {
       "Effect": "Allow",
       "Principal": {
         "Service": "codebuild.amazonaws.com"
+<<<<<<< HEAD
       },
       "Action": "sts:AssumeRole"
     }
@@ -20,6 +21,16 @@ resource "aws_iam_role" "demo-codebuild" {
 EOF
 
 }
+=======
+      ***REMOVED***,
+      "Action": "sts:AssumeRole"
+    ***REMOVED***
+  ]
+***REMOVED***
+EOF
+
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_iam_role_policy" "demo-codebuild" {
   role = aws_iam_role.demo-codebuild.name
@@ -38,7 +49,11 @@ resource "aws_iam_role_policy" "demo-codebuild" {
         "logs:CreateLogStream",
         "logs:PutLogEvents"
       ]
+<<<<<<< HEAD
     },
+=======
+    ***REMOVED***,
+>>>>>>> 191d763... adding_other_demos
     {
       "Sid": "CodeCommitPolicy",
       "Effect": "Allow",
@@ -48,7 +63,11 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
+<<<<<<< HEAD
     },
+=======
+    ***REMOVED***,
+>>>>>>> 191d763... adding_other_demos
     {
       "Effect": "Allow",
       "Action": [
@@ -61,17 +80,28 @@ resource "aws_iam_role_policy" "demo-codebuild" {
         "ec2:DescribeVpcs"
       ],
       "Resource": "*"
+<<<<<<< HEAD
     },
+=======
+    ***REMOVED***,
+>>>>>>> 191d763... adding_other_demos
     {
       "Effect": "Allow",
       "Action": [
         "s3:*"
       ],
       "Resource": [
+<<<<<<< HEAD
         "${aws_s3_bucket.codebuild-cache.arn}",
         "${aws_s3_bucket.codebuild-cache.arn}/*"
       ]
     },
+=======
+        "${aws_s3_bucket.codebuild-cache.arn***REMOVED***",
+        "${aws_s3_bucket.codebuild-cache.arn***REMOVED***/*"
+      ]
+    ***REMOVED***,
+>>>>>>> 191d763... adding_other_demos
     {
       "Effect":"Allow",
       "Action": [
@@ -80,10 +110,17 @@ resource "aws_iam_role_policy" "demo-codebuild" {
         "s3:Get*"
       ],
       "Resource": [
+<<<<<<< HEAD
         "${aws_s3_bucket.demo-artifacts.arn}",
         "${aws_s3_bucket.demo-artifacts.arn}/*"
       ]
     },
+=======
+        "${aws_s3_bucket.demo-artifacts.arn***REMOVED***",
+        "${aws_s3_bucket.demo-artifacts.arn***REMOVED***/*"
+      ]
+    ***REMOVED***,
+>>>>>>> 191d763... adding_other_demos
     {
       "Sid": "ECRPushPolicy",
       "Effect": "Allow",
@@ -103,7 +140,11 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
+<<<<<<< HEAD
     },
+=======
+    ***REMOVED***,
+>>>>>>> 191d763... adding_other_demos
     {
       "Sid": "ECRAuthPolicy",
       "Effect": "Allow",
@@ -113,7 +154,11 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
+<<<<<<< HEAD
     }, 
+=======
+    ***REMOVED***, 
+>>>>>>> 191d763... adding_other_demos
     {
       "Sid": "ECS",
       "Effect": "Allow",
@@ -124,7 +169,11 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
+<<<<<<< HEAD
     }, 
+=======
+    ***REMOVED***, 
+>>>>>>> 191d763... adding_other_demos
     {
       "Effect": "Allow",
       "Action": [
@@ -135,6 +184,7 @@ resource "aws_iam_role_policy" "demo-codebuild" {
          "kms:Decrypt"
         ],
       "Resource": [
+<<<<<<< HEAD
          "${aws_kms_key.demo-artifacts.arn}"
         ]
     }
@@ -143,4 +193,14 @@ resource "aws_iam_role_policy" "demo-codebuild" {
 POLICY
 
 }
+=======
+         "${aws_kms_key.demo-artifacts.arn***REMOVED***"
+        ]
+    ***REMOVED***
+  ]
+***REMOVED***
+POLICY
+
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 

@@ -8,6 +8,12 @@ resource "aws_security_group" "example" {
       to_port     = ingress.key
       cidr_blocks = ingress.value
       protocol    = "tcp"
+<<<<<<< HEAD
     }
   }
 }
+=======
+    ***REMOVED***
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos

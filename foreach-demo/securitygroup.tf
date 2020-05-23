@@ -7,6 +7,12 @@ resource "aws_security_group" "example" {
       from_port   = ingress.value
       to_port     = ingress.value
       protocol    = "tcp"
+<<<<<<< HEAD
     }
   }
 }
+=======
+    ***REMOVED***
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos

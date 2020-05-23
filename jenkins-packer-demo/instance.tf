@@ -4,15 +4,26 @@ data "aws_ami" "ubuntu" {
   filter {
     name   = "name"
     values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   filter {
     name   = "virtualization-type"
     values = ["hvm"]
+<<<<<<< HEAD
   }
 
   owners = ["099720109477"] # Canonical
 }
+=======
+  ***REMOVED***
+
+  owners = ["099720109477"] # Canonical
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_instance" "jenkins-instance" {
   ami           = data.aws_ami.ubuntu.id
@@ -32,7 +43,11 @@ resource "aws_instance" "jenkins-instance" {
 
   # iam instance profile
   iam_instance_profile = aws_iam_instance_profile.jenkins-role.name
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_ebs_volume" "jenkins-data" {
   availability_zone = "eu-west-1a"
@@ -40,20 +55,33 @@ resource "aws_ebs_volume" "jenkins-data" {
   type              = "gp2"
   tags = {
     Name = "jenkins-data"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_volume_attachment" "jenkins-data-attachment" {
   device_name  = var.INSTANCE_DEVICE_NAME
   volume_id    = aws_ebs_volume.jenkins-data.id
   instance_id  = aws_instance.jenkins-instance.id
   skip_destroy = true
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_instance" "app-instance" {
   count         = var.APP_INSTANCE_COUNT
   ami           = var.APP_INSTANCE_AMI
+<<<<<<< HEAD
   instance_type = "t2.micro"
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   # the VPC subnet
   subnet_id = aws_subnet.main-public-1.id
@@ -63,5 +91,9 @@ resource "aws_instance" "app-instance" {
 
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 

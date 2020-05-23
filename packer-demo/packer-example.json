@@ -2,15 +2,24 @@
   "variables": {
     "aws_access_key": "",
     "aws_secret_key": ""
+<<<<<<< HEAD
   },
   "builders": [{
     "type": "amazon-ebs",
     "access_key": "{{user `aws_access_key`}}",
     "secret_key": "{{user `aws_secret_key`}}",
+=======
+  ***REMOVED***,
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`***REMOVED******REMOVED***",
+    "secret_key": "{{user `aws_secret_key`***REMOVED******REMOVED***",
+>>>>>>> 191d763... adding_other_demos
     "region": "eu-west-1",
     "source_ami": "ami-844e0bf7",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
+<<<<<<< HEAD
     "ami_name": "packer-example {{timestamp}}"
   }],
   "provisioners": [{
@@ -20,3 +29,14 @@
     "pause_before": "10s"
   }]
 }
+=======
+    "ami_name": "packer-example {{timestamp***REMOVED******REMOVED***"
+  ***REMOVED***],
+  "provisioners": [{
+    "type": "shell",
+    "scripts": [  "scripts/install_software.sh"   ],
+    "execute_command": "{{ .Vars ***REMOVED******REMOVED*** sudo -E sh '{{ .Path ***REMOVED******REMOVED***'",
+    "pause_before": "10s"
+  ***REMOVED***]
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos

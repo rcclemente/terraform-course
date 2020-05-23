@@ -9,6 +9,7 @@ resource "aws_security_group" "demo-node" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
   }
 
   tags = {
@@ -16,6 +17,15 @@ resource "aws_security_group" "demo-node" {
     "kubernetes.io/cluster/${var.cluster-name}" = "owned"
   }
 }
+=======
+  ***REMOVED***
+
+  tags = {
+    "Name"                                      = "terraform-eks-demo-node"
+    "kubernetes.io/cluster/${var.cluster-name***REMOVED***" = "owned"
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_security_group_rule" "demo-node-ingress-self" {
   description              = "Allow node to communicate with each other"
@@ -25,7 +35,11 @@ resource "aws_security_group_rule" "demo-node-ingress-self" {
   source_security_group_id = aws_security_group.demo-node.id
   to_port                  = 65535
   type                     = "ingress"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_security_group_rule" "demo-node-ingress-cluster" {
   description              = "Allow worker Kubelets and pods to receive communication from the cluster control plane"
@@ -35,5 +49,9 @@ resource "aws_security_group_rule" "demo-node-ingress-cluster" {
   source_security_group_id = aws_security_group.demo-cluster.id
   to_port                  = 65535
   type                     = "ingress"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 

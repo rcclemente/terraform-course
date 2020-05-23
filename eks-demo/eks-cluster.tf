@@ -13,11 +13,19 @@ resource "aws_eks_cluster" "demo" {
     # brackets to avoid interpretation as a list of lists. If the expression
     # returns a single list item then leave it as-is and remove this TODO comment.
     subnet_ids = module.vpc.public_subnets
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   depends_on = [
     aws_iam_role_policy_attachment.demo-cluster-AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.demo-cluster-AmazonEKSServicePolicy,
   ]
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 

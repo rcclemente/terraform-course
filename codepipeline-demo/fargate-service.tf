@@ -13,16 +13,27 @@ resource "aws_ecs_task_definition" "demo" {
 [
   {
     "essential": true,
+<<<<<<< HEAD
     "image": "${aws_ecr_repository.demo.repository_url}",
+=======
+    "image": "${aws_ecr_repository.demo.repository_url***REMOVED***",
+>>>>>>> 191d763... adding_other_demos
     "name": "demo",
     "logConfiguration": {
             "logDriver": "awslogs",
             "options": {
                "awslogs-group" : "demo",
+<<<<<<< HEAD
                "awslogs-region": "${var.AWS_REGION}",
                "awslogs-stream-prefix": "ecs"
             }
      },
+=======
+               "awslogs-region": "${var.AWS_REGION***REMOVED***",
+               "awslogs-stream-prefix": "ecs"
+            ***REMOVED***
+     ***REMOVED***,
+>>>>>>> 191d763... adding_other_demos
      "secrets": [],
      "environment": [],
      "healthCheck": {
@@ -30,12 +41,17 @@ resource "aws_ecs_task_definition" "demo" {
        "interval": 30,
        "retries": 3,
        "timeout": 5
+<<<<<<< HEAD
      }, 
+=======
+     ***REMOVED***, 
+>>>>>>> 191d763... adding_other_demos
      "portMappings": [
         {
            "containerPort": 3000,
            "hostPort": 3000,
            "protocol": "tcp"
+<<<<<<< HEAD
         }
      ]
   }
@@ -43,6 +59,15 @@ resource "aws_ecs_task_definition" "demo" {
 DEFINITION
 
 }
+=======
+        ***REMOVED***
+     ]
+  ***REMOVED***
+]
+DEFINITION
+
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_ecs_service" "demo" {
   name            = "demo"
@@ -54,26 +79,43 @@ resource "aws_ecs_service" "demo" {
 
   deployment_controller {
     type = "CODE_DEPLOY"
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   network_configuration {
     subnets          = slice(module.vpc.public_subnets, 1, 2)
     security_groups  = [aws_security_group.ecs-demo.id]
     assign_public_ip = true
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   load_balancer {
     target_group_arn = aws_lb_target_group.demo-blue.id
     container_name   = "demo"
     container_port   = "3000"
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
   lifecycle {
     ignore_changes = [
       task_definition,
       load_balancer
     ]
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 # security group
 resource "aws_security_group" "ecs-demo" {
@@ -86,7 +128,11 @@ resource "aws_security_group" "ecs-demo" {
     to_port     = 3000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
   egress {
     from_port = 0
@@ -95,10 +141,19 @@ resource "aws_security_group" "ecs-demo" {
     cidr_blocks = [
       "0.0.0.0/0"
     ]
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 # logs
 resource "aws_cloudwatch_log_group" "demo" {
   name = "demo"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos

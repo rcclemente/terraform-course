@@ -14,5 +14,10 @@ module "vpc" {
 
   tags = {
     "Name" = "terraform-cloudpipeline-demo"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos

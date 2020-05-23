@@ -1,12 +1,21 @@
 data "aws_ami" "eks-worker" {
   filter {
     name   = "name"
+<<<<<<< HEAD
     values = ["amazon-eks-node-${aws_eks_cluster.demo.version}-v*"]
   }
 
   most_recent = true
   owners      = ["602401143452"] # Amazon
 }
+=======
+    values = ["amazon-eks-node-${aws_eks_cluster.demo.version***REMOVED***-v*"]
+  ***REMOVED***
+
+  most_recent = true
+  owners      = ["602401143452"] # Amazon
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 # EKS currently documents this required userdata for EKS worker nodes to
 # properly configure Kubernetes applications on the EC2 instance.
@@ -17,10 +26,17 @@ locals {
   demo-node-userdata = <<USERDATA
 #!/bin/bash
 set -o xtrace
+<<<<<<< HEAD
 /etc/eks/bootstrap.sh --apiserver-endpoint '${aws_eks_cluster.demo.endpoint}' --b64-cluster-ca '${aws_eks_cluster.demo.certificate_authority[0].data}' '${var.cluster-name}'
 USERDATA
 
 }
+=======
+/etc/eks/bootstrap.sh --apiserver-endpoint '${aws_eks_cluster.demo.endpoint***REMOVED***' --b64-cluster-ca '${aws_eks_cluster.demo.certificate_authority[0].data***REMOVED***' '${var.cluster-name***REMOVED***'
+USERDATA
+
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_launch_configuration" "demo" {
   associate_public_ip_address = true
@@ -33,8 +49,13 @@ resource "aws_launch_configuration" "demo" {
 
   lifecycle {
     create_before_destroy = true
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_autoscaling_group" "demo" {
   desired_capacity = 2
@@ -56,6 +77,7 @@ resource "aws_autoscaling_group" "demo" {
     key = "Name"
     value = "terraform-eks-demo"
     propagate_at_launch = true
+<<<<<<< HEAD
   }
 
   tag {
@@ -64,4 +86,14 @@ resource "aws_autoscaling_group" "demo" {
     propagate_at_launch = true
   }
 }
+=======
+  ***REMOVED***
+
+  tag {
+    key = "kubernetes.io/cluster/${var.cluster-name***REMOVED***"
+    value = "owned"
+    propagate_at_launch = true
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 

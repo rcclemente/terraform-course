@@ -3,7 +3,11 @@ resource "aws_lb" "demo" {
   subnets                          = module.vpc.public_subnets
   load_balancer_type               = "network"
   enable_cross_zone_load_balancing = true
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_lb_listener" "demo" {
   load_balancer_arn = aws_lb.demo.arn
@@ -13,13 +17,22 @@ resource "aws_lb_listener" "demo" {
   default_action {
     target_group_arn = aws_lb_target_group.demo-blue.id
     type             = "forward"
+<<<<<<< HEAD
   }
+=======
+  ***REMOVED***
+>>>>>>> 191d763... adding_other_demos
   lifecycle {
     ignore_changes = [
       default_action,
     ]
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 
 resource "aws_lb_target_group" "demo-blue" {
   name                 = "demo-http-blue"
@@ -34,8 +47,13 @@ resource "aws_lb_target_group" "demo-blue" {
     unhealthy_threshold = 2
     protocol            = "TCP"
     interval            = 30
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
 resource "aws_lb_target_group" "demo-green" {
   name                 = "demo-http-green"
   port                 = "3000"
@@ -49,5 +67,10 @@ resource "aws_lb_target_group" "demo-green" {
     unhealthy_threshold = 2
     protocol            = "TCP"
     interval            = 30
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 191d763... adding_other_demos
