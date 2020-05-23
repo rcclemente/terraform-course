@@ -1,7 +1,11 @@
 # cluster
 resource "aws_ecs_cluster" "example-cluster" {
   name = "example-cluster"
+<<<<<<< HEAD
 }
+=======
+***REMOVED***
+>>>>>>> 32a340e... add_docker
 
 resource "aws_launch_configuration" "ecs-example-launchconfig" {
   name_prefix          = "ecs-launchconfig"
@@ -13,8 +17,13 @@ resource "aws_launch_configuration" "ecs-example-launchconfig" {
   user_data            = "#!/bin/bash\necho 'ECS_CLUSTER=example-cluster' > /etc/ecs/ecs.config\nstart ecs"
   lifecycle {
     create_before_destroy = true
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 32a340e... add_docker
 
 resource "aws_autoscaling_group" "ecs-example-autoscaling" {
   name                 = "ecs-example-autoscaling"
@@ -26,6 +35,11 @@ resource "aws_autoscaling_group" "ecs-example-autoscaling" {
     key                 = "Name"
     value               = "ecs-ec2-container"
     propagate_at_launch = true
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 32a340e... add_docker
 

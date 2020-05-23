@@ -4,6 +4,11 @@ resource "aws_s3_bucket" "terraform-state" {
 
   tags = {
     Name = "Terraform state"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 32a340e... add_docker
 

@@ -3,10 +3,17 @@
 # volume setup
 vgchange -ay
 
+<<<<<<< HEAD
 DEVICE_FS=`blkid -o value -s TYPE ${DEVICE}`
 if [ "`echo -n $DEVICE_FS`" == "" ] ; then 
   # wait for the device to be attached
   DEVICENAME=`echo "${DEVICE}" | awk -F '/' '{print $3}'`
+=======
+DEVICE_FS=`blkid -o value -s TYPE ${DEVICE***REMOVED***`
+if [ "`echo -n $DEVICE_FS`" == "" ] ; then 
+  # wait for the device to be attached
+  DEVICENAME=`echo "${DEVICE***REMOVED***" | awk -F '/' '{print $3***REMOVED***'`
+>>>>>>> 32a340e... add_docker
   DEVICEEXISTS=''
   while [[ -z $DEVICEEXISTS ]]; do
     echo "checking $DEVICENAME"
@@ -15,8 +22,13 @@ if [ "`echo -n $DEVICE_FS`" == "" ] ; then
       sleep 15
     fi
   done
+<<<<<<< HEAD
   pvcreate ${DEVICE}
   vgcreate data ${DEVICE}
+=======
+  pvcreate ${DEVICE***REMOVED***
+  vgcreate data ${DEVICE***REMOVED***
+>>>>>>> 32a340e... add_docker
   lvcreate --name volume1 -l 100%FREE data
   mkfs.ext4 /dev/data/volume1
 fi
@@ -31,7 +43,11 @@ apt-get install -y default-jre
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 echo "deb http://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
 apt-get update
+<<<<<<< HEAD
 apt-get install -y jenkins=${JENKINS_VERSION} unzip docker.io
+=======
+apt-get install -y jenkins=${JENKINS_VERSION***REMOVED*** unzip docker.io
+>>>>>>> 32a340e... add_docker
 
 # enable docker and add perms
 usermod -G docker jenkins
@@ -49,9 +65,15 @@ pip install awscli
 
 # install terraform
 TERRAFORM_VERSION="0.12.18"
+<<<<<<< HEAD
 wget -q https://releases.hashicorp.com/terraform/$${TERRAFORM_VERSION}/terraform_$${TERRAFORM_VERSION}_linux_amd64.zip \
 && unzip -o terraform_$${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin \
 && rm terraform_$${TERRAFORM_VERSION}_linux_amd64.zip
+=======
+wget -q https://releases.hashicorp.com/terraform/$${TERRAFORM_VERSION***REMOVED***/terraform_$${TERRAFORM_VERSION***REMOVED***_linux_amd64.zip \
+&& unzip -o terraform_$${TERRAFORM_VERSION***REMOVED***_linux_amd64.zip -d /usr/local/bin \
+&& rm terraform_$${TERRAFORM_VERSION***REMOVED***_linux_amd64.zip
+>>>>>>> 32a340e... add_docker
 
 # clean up
 apt-get clean

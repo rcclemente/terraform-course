@@ -9,6 +9,11 @@ terraform {
     bucket = "terraform-state-a3c731f"
     key    = "terraform.tfstate"
     region = "eu-west-1"
+<<<<<<< HEAD
   }
 }
+=======
+  ***REMOVED***
+***REMOVED***
+>>>>>>> 32a340e... add_docker
 '
