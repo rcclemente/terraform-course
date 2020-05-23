@@ -1,0 +1,5 @@
+*/mykey*
+mykey*
+*/.terraform/*
+*/terraform.tfstate*
+*/terraform.tfvars
