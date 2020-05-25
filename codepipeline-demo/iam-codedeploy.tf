@@ -9,8 +9,6 @@ resource "aws_iam_role" "demo-codedeploy" {
       "Effect": "Allow",
       "Principal": {
         "Service": "codedeploy.amazonaws.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
       "Action": "sts:AssumeRole"
     }
@@ -19,23 +17,6 @@ resource "aws_iam_role" "demo-codedeploy" {
 EOF
 
 }
-=======
-      ***REMOVED***,
-=======
-      },
->>>>>>> 78c7374... update_vars_image
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-EOF
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 data "aws_iam_policy_document" "demo-codedeploy-role-policy" {
   statement {
@@ -59,36 +40,16 @@ data "aws_iam_policy_document" "demo-codedeploy-role-policy" {
     resources = [
       "*",
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
-  ***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-  }
->>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
       "s3:Get*",
     ]
     resources = [
-<<<<<<< HEAD
-<<<<<<< HEAD
       "${aws_s3_bucket.demo-artifacts.arn}/*",
     ]
   }
-=======
-      "${aws_s3_bucket.demo-artifacts.arn***REMOVED***/*",
-    ]
-  ***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-      "${aws_s3_bucket.demo-artifacts.arn}/*",
-    ]
-  }
->>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
@@ -98,15 +59,7 @@ data "aws_iam_policy_document" "demo-codedeploy-role-policy" {
     resources = [
       aws_kms_key.demo-artifacts.arn
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
-  ***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-  }
->>>>>>> 78c7374... update_vars_image
   statement {
     effect = "Allow"
     actions = [
@@ -120,34 +73,14 @@ data "aws_iam_policy_document" "demo-codedeploy-role-policy" {
       test     = "StringLike"
       variable = "iam:PassedToService"
       values   = ["ecs-tasks.amazonaws.com"]
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   }
 }
-=======
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-    }
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy" "demo-codedeploy" {
   name   = "codedeploy-policy"
   role   = aws_iam_role.demo-codedeploy.id
   policy = data.aws_iam_policy_document.demo-codedeploy-role-policy.json
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 

@@ -8,28 +8,12 @@ resource "aws_codebuild_project" "demo" {
 
   artifacts {
     type = "CODEPIPELINE"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
-  ***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-  }
->>>>>>> 78c7374... update_vars_image
 
   #cache {
   #  type     = "S3"
   #  location = aws_s3_bucket.codebuild-cache.bucket
-<<<<<<< HEAD
-<<<<<<< HEAD
   #}
-=======
-  #***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-  #}
->>>>>>> 78c7374... update_vars_image
 
   environment {
     compute_type    = "BUILD_GENERAL1_SMALL"
@@ -40,8 +24,6 @@ resource "aws_codebuild_project" "demo" {
     environment_variable {
       name  = "AWS_DEFAULT_REGION"
       value = var.AWS_REGION
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
     environment_variable {
       name  = "AWS_ACCOUNT_ID"
@@ -52,46 +34,12 @@ resource "aws_codebuild_project" "demo" {
       value = aws_ecr_repository.demo.name
     }
   }
-=======
-    ***REMOVED***
-=======
-    }
->>>>>>> 78c7374... update_vars_image
-    environment_variable {
-      name  = "AWS_ACCOUNT_ID"
-      value = data.aws_caller_identity.current.account_id
-    }
-    environment_variable {
-      name  = "IMAGE_REPO_NAME"
-      value = aws_ecr_repository.demo.name
-<<<<<<< HEAD
-    ***REMOVED***
-  ***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-    }
-  }
->>>>>>> 78c7374... update_vars_image
 
   source {
     type      = "CODEPIPELINE"
     buildspec = "buildspec.yml"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
   #depends_on      = [aws_s3_bucket.codebuild-cache]
 }
-=======
-  ***REMOVED***
-
-  #depends_on      = [aws_s3_bucket.codebuild-cache]
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-  }
-
-  #depends_on      = [aws_s3_bucket.codebuild-cache]
-}
->>>>>>> 78c7374... update_vars_image
 

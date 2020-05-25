@@ -12,8 +12,6 @@ resource "aws_iam_role" "demo-codebuild" {
       "Effect": "Allow",
       "Principal": {
         "Service": "codebuild.amazonaws.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
       "Action": "sts:AssumeRole"
     }
@@ -22,23 +20,6 @@ resource "aws_iam_role" "demo-codebuild" {
 EOF
 
 }
-=======
-      ***REMOVED***,
-=======
-      },
->>>>>>> 78c7374... update_vars_image
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-EOF
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy" "demo-codebuild" {
   role = aws_iam_role.demo-codebuild.name
@@ -57,15 +38,7 @@ resource "aws_iam_role_policy" "demo-codebuild" {
         "logs:CreateLogStream",
         "logs:PutLogEvents"
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
-=======
-    ***REMOVED***,
->>>>>>> 191d763... adding_other_demos
-=======
-    },
->>>>>>> 78c7374... update_vars_image
     {
       "Sid": "CodeCommitPolicy",
       "Effect": "Allow",
@@ -75,15 +48,7 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
-=======
-    ***REMOVED***,
->>>>>>> 191d763... adding_other_demos
-=======
-    },
->>>>>>> 78c7374... update_vars_image
     {
       "Effect": "Allow",
       "Action": [
@@ -96,39 +61,17 @@ resource "aws_iam_role_policy" "demo-codebuild" {
         "ec2:DescribeVpcs"
       ],
       "Resource": "*"
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
-=======
-    ***REMOVED***,
->>>>>>> 191d763... adding_other_demos
-=======
-    },
->>>>>>> 78c7374... update_vars_image
     {
       "Effect": "Allow",
       "Action": [
         "s3:*"
       ],
       "Resource": [
-<<<<<<< HEAD
-<<<<<<< HEAD
         "${aws_s3_bucket.codebuild-cache.arn}",
         "${aws_s3_bucket.codebuild-cache.arn}/*"
       ]
     },
-=======
-        "${aws_s3_bucket.codebuild-cache.arn***REMOVED***",
-        "${aws_s3_bucket.codebuild-cache.arn***REMOVED***/*"
-      ]
-    ***REMOVED***,
->>>>>>> 191d763... adding_other_demos
-=======
-        "${aws_s3_bucket.codebuild-cache.arn}",
-        "${aws_s3_bucket.codebuild-cache.arn}/*"
-      ]
-    },
->>>>>>> 78c7374... update_vars_image
     {
       "Effect":"Allow",
       "Action": [
@@ -137,24 +80,10 @@ resource "aws_iam_role_policy" "demo-codebuild" {
         "s3:Get*"
       ],
       "Resource": [
-<<<<<<< HEAD
-<<<<<<< HEAD
         "${aws_s3_bucket.demo-artifacts.arn}",
         "${aws_s3_bucket.demo-artifacts.arn}/*"
       ]
     },
-=======
-        "${aws_s3_bucket.demo-artifacts.arn***REMOVED***",
-        "${aws_s3_bucket.demo-artifacts.arn***REMOVED***/*"
-      ]
-    ***REMOVED***,
->>>>>>> 191d763... adding_other_demos
-=======
-        "${aws_s3_bucket.demo-artifacts.arn}",
-        "${aws_s3_bucket.demo-artifacts.arn}/*"
-      ]
-    },
->>>>>>> 78c7374... update_vars_image
     {
       "Sid": "ECRPushPolicy",
       "Effect": "Allow",
@@ -174,15 +103,7 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
-=======
-    ***REMOVED***,
->>>>>>> 191d763... adding_other_demos
-=======
-    },
->>>>>>> 78c7374... update_vars_image
     {
       "Sid": "ECRAuthPolicy",
       "Effect": "Allow",
@@ -192,15 +113,7 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
     }, 
-=======
-    ***REMOVED***, 
->>>>>>> 191d763... adding_other_demos
-=======
-    }, 
->>>>>>> 78c7374... update_vars_image
     {
       "Sid": "ECS",
       "Effect": "Allow",
@@ -211,15 +124,7 @@ resource "aws_iam_role_policy" "demo-codebuild" {
       "Resource": [
         "*"
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
     }, 
-=======
-    ***REMOVED***, 
->>>>>>> 191d763... adding_other_demos
-=======
-    }, 
->>>>>>> 78c7374... update_vars_image
     {
       "Effect": "Allow",
       "Action": [
@@ -230,8 +135,6 @@ resource "aws_iam_role_policy" "demo-codebuild" {
          "kms:Decrypt"
         ],
       "Resource": [
-<<<<<<< HEAD
-<<<<<<< HEAD
          "${aws_kms_key.demo-artifacts.arn}"
         ]
     }
@@ -240,21 +143,4 @@ resource "aws_iam_role_policy" "demo-codebuild" {
 POLICY
 
 }
-=======
-         "${aws_kms_key.demo-artifacts.arn***REMOVED***"
-=======
-         "${aws_kms_key.demo-artifacts.arn}"
->>>>>>> 78c7374... update_vars_image
-        ]
-    }
-  ]
-}
-POLICY
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
