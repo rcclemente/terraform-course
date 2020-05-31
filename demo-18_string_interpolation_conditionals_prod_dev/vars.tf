@@ -10,6 +10,7 @@ variable "PATH_TO_PUBLIC_KEY" {
   default = "../mykey.pub"
 }
 
+# terrform apply -var ENV=dev
 variable "ENV" {
   default = "prod"
 }
