@@ -1,8 +1,8 @@
 aws-cred.txt
 accessKeys.csv
 **mykey*
-*/.terraform/*
-*/.terraform*
-*/terraform.tfstate*
-*/terraform.tfvars
+**/.terraform/*
+**/.terraform*
+**/terraform.tfstate*
+**/terraform.tfvars
 
