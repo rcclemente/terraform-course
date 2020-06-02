@@ -7,40 +7,16 @@ resource "aws_security_group" "example-instance" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
-  ***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-  }
->>>>>>> 78c7374... update_vars_image
 
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
   tags = {
     Name = "example-instance"
   }
 }
-=======
-  ***REMOVED***
-  tags = {
-    Name = "example-instance"
-  ***REMOVED***
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-  }
-  tags = {
-    Name = "example-instance"
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
