@@ -8,8 +8,6 @@ resource "aws_iam_role" "jenkins-role" {
       "Action": "sts:AssumeRole",
       "Principal": {
         "Service": "ec2.amazonaws.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
       "Effect": "Allow",
       "Sid": ""
@@ -19,37 +17,11 @@ resource "aws_iam_role" "jenkins-role" {
 EOF
 
 }
-=======
-      ***REMOVED***,
-=======
-      },
->>>>>>> 78c7374... update_vars_image
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-EOF
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_instance_profile" "jenkins-role" {
   name = "jenkins-role"
   role = aws_iam_role.jenkins-role.name
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy" "admin-policy" {
   name = "jenkins-admin-role-policy"
@@ -65,24 +37,8 @@ resource "aws_iam_role_policy" "admin-policy" {
         ],
         "Effect": "Allow",
         "Resource": "*"
-<<<<<<< HEAD
-<<<<<<< HEAD
       }
     ]
   }
   EOF
 }
-=======
-      ***REMOVED***
-=======
-      }
->>>>>>> 78c7374... update_vars_image
-    ]
-  }
-  EOF
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 191d763... adding_other_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
