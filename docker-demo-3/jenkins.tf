@@ -13,15 +13,7 @@ resource "aws_instance" "jenkins-instance" {
 
   # user data
   user_data = data.template_cloudinit_config.cloudinit-jenkins.rendered
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_ebs_volume" "jenkins-data" {
   availability_zone = "eu-west-1a"
@@ -29,30 +21,12 @@ resource "aws_ebs_volume" "jenkins-data" {
   type              = "gp2"
   tags = {
     Name = "jenkins-data"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_volume_attachment" "jenkins-data-attachment" {
   device_name = var.INSTANCE_DEVICE_NAME
   volume_id   = aws_ebs_volume.jenkins-data.id
   instance_id = aws_instance.jenkins-instance.id
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 

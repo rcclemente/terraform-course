@@ -9,8 +9,6 @@ resource "aws_iam_role" "ecs-ec2-role" {
       "Action": "sts:AssumeRole",
       "Principal": {
         "Service": "ec2.amazonaws.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
       "Effect": "Allow",
       "Sid": ""
@@ -20,37 +18,11 @@ resource "aws_iam_role" "ecs-ec2-role" {
 EOF
 
 }
-=======
-      ***REMOVED***,
-=======
-      },
->>>>>>> 78c7374... update_vars_image
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-EOF
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_instance_profile" "ecs-ec2-role" {
   name = "ecs-ec2-role"
   role = aws_iam_role.ecs-ec2-role.name
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role" "ecs-consul-server-role" {
   name = "ecs-consul-server-role"
@@ -62,8 +34,6 @@ resource "aws_iam_role" "ecs-consul-server-role" {
       "Action": "sts:AssumeRole",
       "Principal": {
         "Service": "ec2.amazonaws.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
       "Effect": "Allow",
       "Sid": ""
@@ -73,24 +43,6 @@ resource "aws_iam_role" "ecs-consul-server-role" {
 EOF
 
 }
-=======
-      ***REMOVED***,
-=======
-      },
->>>>>>> 78c7374... update_vars_image
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-EOF
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_role_policy" "ecs-ec2-role-policy" {
 name   = "ecs-ec2-role-policy"
@@ -118,15 +70,7 @@ policy = <<EOF
               "logs:PutLogEvents"
             ],
             "Resource": "*"
-<<<<<<< HEAD
-<<<<<<< HEAD
         },
-=======
-        ***REMOVED***,
->>>>>>> 32a340e... add_docker
-=======
-        },
->>>>>>> 78c7374... update_vars_image
         {
             "Effect": "Allow",
             "Action": [
@@ -138,29 +82,12 @@ policy = <<EOF
             "Resource": [
                 "arn:aws:logs:*:*:*"
             ]
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
     ]
 }
 EOF
 
 }
-=======
-        ***REMOVED***
-=======
-        }
->>>>>>> 78c7374... update_vars_image
-    ]
-}
-EOF
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 # ecs service role
 resource "aws_iam_role" "ecs-service-role" {
@@ -173,8 +100,6 @@ assume_role_policy = <<EOF
       "Action": "sts:AssumeRole",
       "Principal": {
         "Service": "ecs.amazonaws.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
       "Effect": "Allow",
       "Sid": ""
@@ -184,36 +109,10 @@ assume_role_policy = <<EOF
 EOF
 
 }
-=======
-      ***REMOVED***,
-=======
-      },
->>>>>>> 78c7374... update_vars_image
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-EOF
-
-<<<<<<< HEAD
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_iam_policy_attachment" "ecs-service-attach1" {
   name       = "ecs-service-attach1"
   roles      = [aws_iam_role.ecs-service-role.name]
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 32a340e... add_docker
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
