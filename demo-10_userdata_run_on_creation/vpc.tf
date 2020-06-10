@@ -7,18 +7,8 @@ resource "aws_vpc" "main" {
   enable_classiclink   = "false"
   tags = {
     Name = "main"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 # Subnets
 resource "aws_subnet" "main-public-1" {
@@ -29,18 +19,8 @@ resource "aws_subnet" "main-public-1" {
 
   tags = {
     Name = "main-public-1"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_subnet" "main-public-2" {
   vpc_id                  = aws_vpc.main.id
@@ -50,18 +30,8 @@ resource "aws_subnet" "main-public-2" {
 
   tags = {
     Name = "main-public-2"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_subnet" "main-public-3" {
   vpc_id                  = aws_vpc.main.id
@@ -71,18 +41,8 @@ resource "aws_subnet" "main-public-3" {
 
   tags = {
     Name = "main-public-3"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_subnet" "main-private-1" {
   vpc_id                  = aws_vpc.main.id
@@ -92,18 +52,8 @@ resource "aws_subnet" "main-private-1" {
 
   tags = {
     Name = "main-private-1"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_subnet" "main-private-2" {
   vpc_id                  = aws_vpc.main.id
@@ -113,18 +63,8 @@ resource "aws_subnet" "main-private-2" {
 
   tags = {
     Name = "main-private-2"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_subnet" "main-private-3" {
   vpc_id                  = aws_vpc.main.id
@@ -134,18 +74,8 @@ resource "aws_subnet" "main-private-3" {
 
   tags = {
     Name = "main-private-3"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 # Internet GW
 resource "aws_internet_gateway" "main-gw" {
@@ -153,18 +83,8 @@ resource "aws_internet_gateway" "main-gw" {
 
   tags = {
     Name = "main"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 # route tables
 resource "aws_route_table" "main-public" {
@@ -172,68 +92,26 @@ resource "aws_route_table" "main-public" {
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.main-gw.id
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
   tags = {
     Name = "main-public-1"
   }
 }
-=======
-  ***REMOVED***
-
-  tags = {
-    Name = "main-public-1"
-  ***REMOVED***
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-  }
-
-  tags = {
-    Name = "main-public-1"
-  }
-}
->>>>>>> 78c7374... update_vars_image
 
 # route associations public
 resource "aws_route_table_association" "main-public-1-a" {
   subnet_id      = aws_subnet.main-public-1.id
   route_table_id = aws_route_table.main-public.id
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_route_table_association" "main-public-2-a" {
   subnet_id      = aws_subnet.main-public-2.id
   route_table_id = aws_route_table.main-public.id
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
 resource "aws_route_table_association" "main-public-3-a" {
   subnet_id      = aws_subnet.main-public-3.id
   route_table_id = aws_route_table.main-public.id
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-***REMOVED***
->>>>>>> 986ba1c... add_demos
-=======
-}
->>>>>>> 78c7374... update_vars_image
 
