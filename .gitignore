@@ -6,3 +6,4 @@ accessKeys.csv
 **/terraform.tfstate*
 **/terraform.tfvars
 **/docker-login.sh
+*credentials.json
