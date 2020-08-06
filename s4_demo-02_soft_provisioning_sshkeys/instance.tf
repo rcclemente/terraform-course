@@ -8,10 +8,14 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   key_name      = aws_key_pair.mykey.key_name
 
+  // uploads the local file
   provisioner "file" {
     source      = "script.sh"
     destination = "/tmp/script.sh"
   }
+
+  // updates the file permissions
+  // and runs the script
   provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/script.sh",

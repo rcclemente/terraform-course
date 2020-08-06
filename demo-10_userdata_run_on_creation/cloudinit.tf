@@ -1,3 +1,12 @@
+// https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/cloudinit_config
+// pass data from the script
+//
+// resource "aws_instance" "web" {
+//   ami              = "ami-d05e75b8"
+//   instance_type    = "t2.micro"
+//   user_data_base64 = "${data.template_cloudinit_config.config.rendered}"
+// }
+
 data "template_file" "init-script" {
   template = file("scripts/init.cfg")
   vars = {

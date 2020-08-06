@@ -2,6 +2,8 @@ resource "aws_security_group" "myinstance" {
   vpc_id      = aws_vpc.main.id
   name        = "myinstance"
   description = "security group for my instance"
+
+  // allow outgoing connection to everywhere
   egress {
     from_port   = 0
     to_port     = 0
@@ -9,6 +11,7 @@ resource "aws_security_group" "myinstance" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  // allow ssh to port 22 from everywhere
   ingress {
     from_port   = 22
     to_port     = 22
@@ -16,6 +19,7 @@ resource "aws_security_group" "myinstance" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  // only allow connections to port 80 from the elb securitygroup
   ingress {
     from_port       = 80
     to_port         = 80
